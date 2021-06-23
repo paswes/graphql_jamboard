@@ -1,0 +1,54 @@
+#query {
+#  userById(id: "60d36dc20e3a9c0007328426"){
+#    name
+#    _id
+#  }
+#}
+
+#mutation {
+#  createUser(user: {name: "Max"}){
+#    _id
+#  }
+#}
+
+#mutation {
+#  createBoard(board: {owner: "60d377097e701c4a4c5fcb80"}){
+#    _id
+#  }
+#}
+
+#mutation {
+#  addEditor(editor: {boardId: "60d39817c573c155171401e5", editor:"60d36dc20e3a9c0007328426"}) {
+#    editor
+#  }
+#}
+
+#mutation {
+#  addPost(post: {boardId: "60d39817c573c155171401e5", text: "Das ist der Text", author: "60d36dc20e3a9c0007328426", x: 1, y: 1}) {
+#    text
+##  }
+#}
+
+#mutation {
+#  deletePost(deletePost: {boardId: "60d39817c573c155171401e5", postId: "60d39aece8cb9f5668175781"}) {
+#    postId
+#  }
+#}
+
+#mutation {
+#  deleteEditor(deleteEditor: {boardId: "60d39817c573c155171401e5", editorId: "60d36dc20e3a9c0007328426"}) {
+#    editorId
+#  }
+#}
+
+#mutation {
+#  updatePost(post: {boardId: "60d39817c573c155171401e5", postId: "60d3a64ba8c2205a2620e7ea", text: "updated Text"}) {
+#    text
+#  }
+#}
+
+#mutation {
+#  deleteBoard(deleteBoard: {boardId: "60d39817c573c155171401e5"}) {
+#    boardId
+#  }
+#}
